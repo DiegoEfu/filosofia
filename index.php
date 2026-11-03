@@ -196,11 +196,11 @@ function e(string $valor): string {
           <p><?= e($autor['profesion']) ?></p>
         </div>
         <div class="point-box point-full">
-          <span class="point-num">Asignatura / Temática</span>
+          <span class="point-num">Asignatura</span>
           <p><?= e($autor['asignatura']) ?></p>
         </div>
         <div class="point-box">
-          <span class="point-num">Área / Carrera</span>
+          <span class="point-num">Maestría</span>
           <p><?= e($autor['carrera']) ?></p>
         </div>
         <div class="point-box">
