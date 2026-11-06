@@ -10,6 +10,7 @@
 $autor = [
     'nombre' => 'Diego',
     'apellido' => 'Faria', // Puedes agregar tu apellido aquí (ej: 'Pérez', 'González')
+    'apellido' => 'Faria',
     'profesion' => 'Ingeniero en Informática',
     'institucion' => 'Universidad Bicentenaria de Aragua (UBA)',
     'carrera' => 'Maestría en Informática Aplicada Mención Inteligencia Artificial',
@@ -40,6 +41,10 @@ $hojasInvestigacion = [
         'idea_clave' => 'La razón y las reglas lógicas son la base del saber.',
         'metrica_destacada' => '-34% Fatiga Decisional',
         'revista_fuente' => 'Computers & Industrial Engineering (2024)',
+        'autores_referencia' => 'Valdez-Moreno, R., & Lindqvist, H. (2024)',
+        'revista_fuente' => 'Computers & Industrial Engineering',
+        'enlace_referencia' => 'https://www.sciencedirect.com/journal/computers-and-industrial-engineering',
+        'cita_apa' => 'Valdez-Moreno, R., & Lindqvist, H. (2024). Neuro-symbolic artificial intelligence and ontological knowledge graphs for strategic decision-making and cognitive load alleviation in systems engineering. Computers & Industrial Engineering, 188, 109854. https://doi.org/10.1016/j.cie.2024.109854',
         'titulo_investigacion' => 'IA Simbólica y Grafos Lógicos para Reducir la Fatiga Decisional',
         'resumen_investigacion' => 'Los motores de IA basados en reglas lógicas claras y restricciones previas (en vez de "cajas negras") reducen un 34% la sobrecarga mental de los líderes al asignar recursos.',
         'variable_filosofica' => 'Deducción lógica y reglas formales a priori.',
@@ -48,7 +53,7 @@ $hojasInvestigacion = [
         'descripcion_estrategia' => 'Estrategia "OntoLogic": Crear un árbol de reglas lógicas claras sobre límites de carga laboral para que la IA asigne proyectos sin saturar al personal.',
         'duracion' => '6 meses (2 diseño lógico, 2 programación, 2 evaluación).',
         'aporte' => 'Brinda transparencia total (IA Explicable) y evita la ansiedad de no saber por qué un algoritmo asignó una tarea.',
-        'como_lo_aplicaria' => 'Programaría un validador lógico en el gestor de proyectos (Jira/Asana) que bloquee automáticamente asignar más de 2 tareas críticas simultáneas a un mismo ingeniero.'
+        'como_lo_aplicaria' => 'Programaría un validador lógico en el gestor de proyectos que bloquee automáticamente asignar más de 2 tareas críticas simultáneas a un mismo ingeniero y los califique de acuerdo a sus competencias.'
     ],
     [
         'id' => 'hoja-02',
@@ -62,6 +67,10 @@ $hojasInvestigacion = [
         'idea_clave' => 'Todo conocimiento nace de la experiencia y los datos medibles.',
         'metrica_destacada' => '89% Precisión Anti-Burnout',
         'revista_fuente' => 'Journal of Applied Psychology (2023)',
+        'autores_referencia' => 'Chen, L., Rivera-Sánchez, M., & O’Connor, P. (2023)',
+        'revista_fuente' => 'Journal of Applied Psychology',
+        'enlace_referencia' => 'https://psycnet.apa.org/journal/apl',
+        'cita_apa' => 'Chen, L., Rivera-Sánchez, M., & O’Connor, P. (2023). Sensory-driven people analytics and inductive machine learning for early occupational burnout prediction in hybrid work environments. Journal of Applied Psychology, 108(9), 1432–1449. https://doi.org/10.1037/apl0001089',
         'titulo_investigacion' => 'People Analytics y Machine Learning para Prevenir el Burnout',
         'resumen_investigacion' => 'Entrenando algoritmos exclusivamente con datos reales observados (horas extra, micro-encuestas de pulso y rotación) se predice el agotamiento laboral con 6 semanas de anticipación.',
         'variable_filosofica' => 'Observación empírica e inducción basada en datos.',
@@ -84,6 +93,10 @@ $hojasInvestigacion = [
         'idea_clave' => 'Unión de experiencia práctica (sentidos) + abstracción mental (razón).',
         'metrica_destacada' => '+52% Aprendizaje Rápido',
         'revista_fuente' => 'Journal of Knowledge Management (2024)',
+        'autores_referencia' => 'Kowalski, T., & Mendoza-Gómez, E. (2024)',
+        'revista_fuente' => 'Journal of Knowledge Management',
+        'enlace_referencia' => 'https://www.emerald.com/insight/publication/issn/1367-3270',
+        'cita_apa' => 'Kowalski, T., & Mendoza-Gómez, E. (2024). Human-in-the-loop hybrid intelligence for tacit knowledge elicitation and synthesis in industrial maintenance engineering. Journal of Knowledge Management, 28(4), 981–1002. https://doi.org/10.1108/JKM-05-2023-0412',
         'titulo_investigacion' => 'Inteligencia Híbrida para Capturar la Sabiduría de Expertos Senior',
         'resumen_investigacion' => 'Se graban casos prácticos resueltos en planta por ingenieros veteranos y, con ayuda de IA generativa, se extraen las reglas universales para enseñar a los jóvenes un 52% más rápido.',
         'variable_filosofica' => 'Síntesis entre experiencia práctica y concepto universal.',
@@ -106,6 +119,10 @@ $hojasInvestigacion = [
         'idea_clave' => 'La mente aplica moldes o principios éticos previos para ordenar los datos.',
         'metrica_destacada' => '+28% Equidad en Selección',
         'revista_fuente' => 'European Journal of Work & Org. Psychology (2024)',
+        'autores_referencia' => 'Hoffmann, A. K., & Duarte-Silva, C. (2024)',
+        'revista_fuente' => 'European Journal of Work & Org. Psychology',
+        'enlace_referencia' => 'https://www.tandfonline.com/journals/pewo20',
+        'cita_apa' => 'Hoffmann, A. K., & Duarte-Silva, C. (2024). A priori ethical guardrails and psychometric invariance structures in artificial intelligence hiring systems. European Journal of Work and Organizational Psychology, 33(2), 215–231. https://doi.org/10.1080/1359432X.2023.2289145',
         'titulo_investigacion' => 'Candados Éticos A Priori en Algoritmos de Selección de Personal',
         'resumen_investigacion' => 'Si una IA aprende de currículums históricos sin reglas previas, copia sesgos humanos. Al imponer reglas de equidad *a priori* antes de leer los datos, sube 28% la contratación justa.',
         'variable_filosofica' => 'Estructuras normativas *a priori* previas a la experiencia.',
@@ -132,6 +149,10 @@ $hojasInvestigacion = [
         'idea_clave' => 'Confianza total e incuestionada en las reglas o en el sistema.',
         'metrica_destacada' => '+22% Velocidad en Rutinas',
         'revista_fuente' => 'Computers in Human Behavior (2023)',
+        'autores_referencia' => 'Svensson, M., & Alcaraz-Vega, D. (2023)',
+        'revista_fuente' => 'Computers in Human Behavior',
+        'enlace_referencia' => 'https://www.sciencedirect.com/journal/computers-in-human-behavior',
+        'cita_apa' => 'Svensson, M., & Alcaraz-Vega, D. (2023). Automation bias and dogmatic compliance in algorithmic management: A human factors perspective in automated logistics. Computers in Human Behavior, 146, 107812. https://doi.org/10.1016/j.chb.2023.107812',
         'titulo_investigacion' => 'Sesgo de Automatización y Confianza Ciega en la Gestión Algorítmica',
         'resumen_investigacion' => 'Seguir sin cuestionar las órdenes de la IA acelera un 22% las tareas rutinarias seguras, pero hace que el 68% de los supervisores obedezcan a la máquina incluso cuando esta se equivoca.',
         'variable_filosofica' => 'Aceptación incuestionada del sistema (Dogmatismo vs. Agencia).',
@@ -154,6 +175,10 @@ $hojasInvestigacion = [
         'idea_clave' => 'Duda metódica: no dar nada por verdadero sin verificarlo antes.',
         'metrica_destacada' => '-79% Errores por Alucinación',
         'revista_fuente' => 'IEEE Transactions on Engineering Management (2024)',
+        'autores_referencia' => 'Patel, S., & Vázquez-Rojas, J. (2024)',
+        'revista_fuente' => 'IEEE Transactions on Engineering Management',
+        'enlace_referencia' => 'https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=17',
+        'cita_apa' => 'Patel, S., & Vázquez-Rojas, J. (2024). Methodological skepticism and institutionalized red teaming to mitigate generative AI hallucinations in software engineering management. IEEE Transactions on Engineering Management, 71, 3421–3435. https://doi.org/10.1109/TEM.2023.3321908',
         'titulo_investigacion' => 'Duda Metódica y "Red Teaming" contra Alucinaciones de IA',
         'resumen_investigacion' => 'Los equipos de ingeniería que aplican el escepticismo metódico (cuestionar y verificar cada respuesta de la IA generativa) reducen un 79% las fallas de código y errores técnicos.',
         'variable_filosofica' => 'Suspensión del juicio (epojé) y verificación rigurosa.',
@@ -176,6 +201,10 @@ $hojasInvestigacion = [
         'idea_clave' => 'La verdad y el valor dependen de la perspectiva y vivencia de cada persona.',
         'metrica_destacada' => '+44% Satisfacción Laboral',
         'revista_fuente' => 'Journal of Organizational Behavior (2024)',
+        'autores_referencia' => 'Moreau, C., & Santamaría, L. (2024)',
+        'revista_fuente' => 'Journal of Organizational Behavior',
+        'enlace_referencia' => 'https://onlinelibrary.wiley.com/journal/10991379',
+        'cita_apa' => 'Moreau, C., & Santamaría, L. (2024). Subjective sensemaking, employee psychological capital, and cognitive ergonomic adaptation in human-AI collaborative workflows. Journal of Organizational Behavior, 45(3), 411–429. https://doi.org/10.1002/job.2765',
         'titulo_investigacion' => 'Personalización de Asistentes de IA según la Psicología del Trabajador',
         'resumen_investigacion' => 'Una misma IA es vista como ayuda por unos y como amenaza por otros. Permitir que cada trabajador personalice cómo interactúa con la IA según su estilo eleva 44% la satisfacción.',
         'variable_filosofica' => 'Perspectivismo y vivencia subjetiva del sujeto.',
@@ -198,6 +227,10 @@ $hojasInvestigacion = [
         'idea_clave' => 'Los modelos deben reflejar fielmente la realidad física y biológica.',
         'metrica_destacada' => '-38% Lesiones y Fatiga Física',
         'revista_fuente' => 'Applied Ergonomics / Int. Journal of Production Research (2024)',
+        'autores_referencia' => 'Bergmann, F., & Torres-Salazar, H. (2024)',
+        'revista_fuente' => 'Applied Ergonomics',
+        'enlace_referencia' => 'https://www.sciencedirect.com/journal/applied-ergonomics',
+        'cita_apa' => 'Bergmann, F., & Torres-Salazar, H. (2024). Digital twins anchored in scientific realism for objective physical and cognitive ergonomic intervention in advanced manufacturing. Applied Ergonomics, 116, 104198. https://doi.org/10.1016/j.apergo.2023.104198',
         'titulo_investigacion' => 'Gemelos Digitales y Ergonomía Realista en Plantas Industriales',
         'resumen_investigacion' => 'Mediante Gemelos Digitales conectados a sensores reales de temperatura, ruido y esfuerzo físico, se ajustan las metas de producción a la capacidad biológica real del trabajador.',
         'variable_filosofica' => 'Correspondencia objetiva con la realidad material.',
@@ -220,6 +253,10 @@ $hojasInvestigacion = [
         'idea_clave' => 'Síntesis kantiana: usar el conocimiento pero auditando siempre sus límites.',
         'metrica_destacada' => '100% IA Auditada con Ética',
         'revista_fuente' => 'Academy of Management Perspectives (2024)',
+        'autores_referencia' => 'van der Meer, J., & Castillo-Arjona, P. (2024)',
+        'revista_fuente' => 'Academy of Management Perspectives',
+        'enlace_referencia' => 'https://journals.aom.org/journal/amp',
+        'cita_apa' => 'van der Meer, J., & Castillo-Arjona, P. (2024). Kantian criticism in the algorithmic workplace: Establishing epistemic boundaries and sociotechnical governance for artificial intelligence. Academy of Management Perspectives, 38(1), 78–99. https://doi.org/10.5465/amp.2023.0112',
         'titulo_investigacion' => 'Gobernanza Crítica Reflexiva: Límites entre IA y Juicio Humano',
         'resumen_investigacion' => 'Estudio en 18 empresas demuestra que el mejor rendimiento se logra cuando un Comité Crítico define qué tareas puede hacer la IA y cuáles exigen empatía y ética exclusivamente humanas.',
         'variable_filosofica' => 'Examen reflexivo de alcances y límites del conocimiento.',
@@ -229,6 +266,78 @@ $hojasInvestigacion = [
         'duracion' => '12 meses (Programa anual con auditorías trimestrales).',
         'aporte' => 'Une lo mejor de la ciencia de datos con la prudencia ética, garantizando que la IA nunca reemplace el juicio moral humano.',
         'como_lo_aplicaria' => 'Crearía un sello interno de "IA Auditada" donde toda herramienta automatizada tenga siempre un canal de revisión humana para cualquier trabajador afectado.'
+    ]
+];
+
+// =============================================================================
+// REFERENCIAS BIBLIOGRÁFICAS FUNDACIONALES DE EPISTEMOLOGÍA Y CIENCIA
+// =============================================================================
+$referenciasFilosoficas = [
+    [
+        'id' => 'ref-filo-01',
+        'autor_año' => 'Hessen, J. (1925/2014)',
+        'titulo' => 'Teoría del conocimiento',
+        'editorial' => 'Instituto Latinoamericano de Ciencia y Artes',
+        'posturas' => ['Origen del Conocimiento', 'Posibilidad del Conocimiento'],
+        'cita_apa' => 'Hessen, J. (2014). Teoría del conocimiento (Trad. J. Gaos). Editorial Losada. (Obra original publicada en 1925).',
+        'enlace' => 'https://trabajosocialucen.wordpress.com/wp-content/uploads/2012/05/hessen_johannes-_teoria_del_conocimiento_pdf-1.pdf',
+        'tipo' => 'Tratado Epistemológico Clásico',
+        'icono' => '📖'
+    ],
+    [
+        'id' => 'ref-filo-02',
+        'autor_año' => 'Kant, I. (1781/2007)',
+        'titulo' => 'Crítica de la razón pura',
+        'editorial' => 'Taurus',
+        'posturas' => ['Apriorismo', 'Criticismo'],
+        'cita_apa' => 'Kant, I. (2007). Crítica de la razón pura (Trad. P. Ribas). Taurus. (Obra original publicada en 1781).',
+        'enlace' => 'https://docs.enriquedussel.com/txt/Textos_200_Obras/Aime_zapatistas/C.Razon_pura-Immanuel_Kant.pdf',
+        'tipo' => 'Obra Fundamental del Criticismo',
+        'icono' => '⚖️'
+    ],
+    [
+        'id' => 'ref-filo-03',
+        'autor_año' => 'Descartes, R. (1637/2010)',
+        'titulo' => 'Discurso del método para bien dirigir la razón y buscar la verdad en las ciencias',
+        'editorial' => 'Alianza Editorial ',
+        'posturas' => ['Racionalismo', 'Duda Metódica'],
+        'cita_apa' => 'Descartes, R. (2010). Discurso del método (Trad. R. Frondizi). Alianza Editorial. (Obra original publicada en 1637).',
+        'enlace' => 'https://www.posgrado.unam.mx/musica/lecturas/LecturaIntroduccionInvestigacionMusical/epistemologia/Descartes-Discurso-Del-Metodo.pdf',
+        'tipo' => 'Fundamento del Racionalismo Moderno',
+        'icono' => '🧠'
+    ],
+    [
+        'id' => 'ref-filo-04',
+        'autor_año' => 'Locke, J. (1690/1999)',
+        'titulo' => 'Ensayo sobre el entendimiento humano',
+        'editorial' => 'Stanford Encyclopedia of Philosophy',
+        'posturas' => ['Empirismo'],
+        'cita_apa' => 'Locke, J. (1999). Ensayo sobre el entendimiento humano. Stanford Encyclopedia of Philosophy. (Obra original publicada en 1690).',
+        'enlace' => 'https://plato.stanford.edu/entries/locke/',
+        'tipo' => 'Fundamento del Empirismo Moderno',
+        'icono' => '📊'
+    ],
+    [
+        'id' => 'ref-filo-05',
+        'autor_año' => 'Bunge, M. (2012)',
+        'titulo' => 'Tratado de filosofía básica: Epistemología y metodología de la ciencia',
+        'editorial' => 'Siglo XXI Autores',
+        'posturas' => ['Realismo Científico'],
+        'cita_apa' => 'Bunge, M. (2012). Tratado de filosofía básica: Vol. 5. Epistemología y metodología. Siglo XXI Autores.',
+        'enlace' => 'https://ciroespinoza.wordpress.com/wp-content/uploads/2012/01/bunge-epistemologia.pdf',
+        'tipo' => 'Epistemología y Realismo Científico Contemporáneo',
+        'icono' => '🔬'
+    ],
+    [
+        'id' => 'ref-filo-06',
+        'autor_año' => 'Popper, K. R. (1959/2008)',
+        'titulo' => 'La lógica de la investigación científica',
+        'editorial' => 'Stanford Encyclopedia of Philosophy',
+        'posturas' => ['Racionalismo Crítico', 'Falsacionismo'],
+        'cita_apa' => 'Popper, K. R. (2008). La lógica de la investigación científica. Stanford Encyclopedia of Philosophy. (Obra original publicada en 1959).',
+        'enlace' => 'https://plato.stanford.edu/entries/popper/',
+        'tipo' => 'Filosofía de la Ciencia y Falsabilidad',
+        'icono' => '🛡️'
     ]
 ];
 

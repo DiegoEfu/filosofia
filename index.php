@@ -31,7 +31,7 @@ function e(string $valor): string {
       <div class="author-badge-card" id="author-card">
         <div class="author-avatar" aria-hidden="true">👨‍💻</div>
         <div class="author-info">
-          <span class="author-label">Portafolio</span>
+          <span class="author-label">Autoría del Portafolio</span>
           <strong class="author-name"><?= e($autor['nombre']) ?><?= $autor['apellido'] !== '' ? ' ' . e($autor['apellido']) : '' ?></strong>
           <span class="author-subtext"><?= e($autor['profesion']) ?></span>
         </div>
@@ -39,9 +39,15 @@ function e(string $valor): string {
           Ficha &rarr;
         </button>
       </div>
+
+      <div class="hero-actions">
+        <button type="button" class="btn-print" id="btn-print">
+          🖨️ Imprimir / PDF
+        </button>
+      </div>
     </div>
 
-    <!-- Mapa Visual Rápido (Infografía de los 2 Bloques + 5 Estrategias) -->
+    <!-- Mapa Visual Rápido (Infografía de los Bloques + Estrategias + Referencias) -->
     <div class="visual-summary-strip">
       <div class="summary-stat">
         <span class="stat-num">4</span>
@@ -61,7 +67,14 @@ function e(string $valor): string {
         <span class="stat-num">5</span>
         <div>
           <strong>Estrategias de DO con IA</strong>
-          <small>Aplicadas a Psicología del Trabajo e Ingeniería</small>
+          <small>Psicología del Trabajo e Ingeniería</small>
+        </div>
+      </div>
+      <div class="summary-stat">
+        <span class="stat-num">15</span>
+        <div>
+          <strong>Referencias y Enlaces</strong>
+          <small>Revistas Indexadas y Tratados Epistemológicos</small>
         </div>
       </div>
     </div>
@@ -91,13 +104,18 @@ function e(string $valor): string {
             🚀 5 Estrategias DO (Punto 7)
           </button>
         </li>
+        <li>
+          <button type="button" class="tab-btn" data-filter="referencias">
+            📚 Referencias y Enlaces (15)
+          </button>
+        </li>
       </ul>
 
       <search class="quick-search">
         <input
           type="search"
           id="quick-search-input"
-          placeholder="🔍 Buscar postura, autor o tema..."
+          placeholder="🔍 Buscar postura, autor, revista o tema..."
           aria-label="Buscar en el portafolio"
         >
       </search>
@@ -111,7 +129,7 @@ function e(string $valor): string {
       <div class="section-heading">
         <div>
           <h2>📁 Las 9 Hojas del Portafolio (Haz clic en cualquiera para ver sus 7 puntos)</h2>
-          <p>Cada tarjeta resume la postura filosófica y su investigación con IA. Al abrirla verás la ficha completa lista para presentar.</p>
+          <p>Cada tarjeta resume la postura filosófica y su investigación con IA. Al abrirla verás la ficha completa y el enlace a su revista científica.</p>
         </div>
       </div>
 
@@ -168,6 +186,110 @@ function e(string $valor): string {
       </div>
     </section>
 
+    <!-- SECCIÓN 4: REFERENCIAS BIBLIOGRÁFICAS Y ENLACES CIENTÍFICOS -->
+    <section id="seccion-referencias" class="portfolio-section" style="margin-top: 3.5rem;">
+      <div class="section-heading">
+        <div>
+          <h2>📚 Sección de Referencias Bibliográficas y Enlaces a Publicaciones</h2>
+          <p>Catálogo formal de investigaciones publicadas en revistas indexadas de Psicología del Trabajo, Ingeniería con IA y tratados epistemológicos clásicos bajo normas APA 7ma Edición.</p>
+        </div>
+      </div>
+
+      <!-- Bloque A: Artículos Científicos de las 9 Hojas -->
+      <div class="ref-subheading">
+        <h3>🔬 Investigaciones Científicas del Portafolio (9 Hojas Temáticas)</h3>
+        <p>Fuentes primarias en revistas de alto impacto (Elsevier, APA, IEEE, Emerald, Wiley, Taylor &amp; Francis, AOM).</p>
+      </div>
+
+      <div class="references-list" id="ref-scientific-list">
+        <?php foreach ($hojasInvestigacion as $h): ?>
+          <article class="reference-card" data-category="<?= e($h['categoria_id']) ?>" style="--ref-accent: <?= e($h['color']) ?>;">
+            <div class="ref-card-header">
+              <div class="ref-badge-group">
+                <span class="ref-posture-badge" style="background: <?= e($h['bg_soft']) ?>; color: <?= e($h['color']) ?>; border-color: <?= e($h['color']) ?>;">
+                  <?= $h['icono'] ?> <?= e($h['postura']) ?>
+                </span>
+                <span class="ref-folio-tag">Hoja #0<?= (int)$h['numero'] ?> &bull; <?= e($h['categoria_nombre']) ?></span>
+              </div>
+              <span class="ref-journal-name"><?= e($h['revista_fuente']) ?></span>
+            </div>
+
+            <h4 class="ref-paper-title"><?= e($h['titulo_investigacion']) ?></h4>
+
+            <p class="ref-apa-citation">
+              <strong>Cita APA (7ma ed.):</strong><br>
+              <?= e($h['cita_apa']) ?>
+            </p>
+
+            <div class="ref-card-footer">
+              <a
+                href="<?= e($h['enlace_referencia']) ?>"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-ref-link"
+                title="Abrir enlace a la revista oficial"
+              >
+                <span>🔗 Visitar Revista Oficial (<?= e($h['revista_fuente']) ?>)</span>
+                <span class="link-arrow">&nearr;</span>
+              </a>
+
+              <button
+                type="button"
+                class="btn-ref-sheet"
+                data-dialog-target="modal-<?= e($h['id']) ?>"
+              >
+                📄 Ver Hoja #0<?= (int)$h['numero'] ?>
+              </button>
+            </div>
+          </article>
+        <?php endforeach; ?>
+      </div>
+
+      <!-- Bloque B: Tratados Epistemológicos Fundacionales -->
+      <div class="ref-subheading" style="margin-top: 2.5rem;">
+        <h3>📖 Literatura Asociada a la Filosofía de las Ciencias</h3>
+        <p>Textos y enciclopedias académicas asociadas al Racionalismo, Empirismo, Intelectualismo, Apriorismo, Realismo y Criticismo .</p>
+      </div>
+
+      <div class="references-list" id="ref-philosophical-list">
+        <?php foreach ($referenciasFilosoficas as $rf): ?>
+          <article class="reference-card ref-philosophical-card">
+            <div class="ref-card-header">
+              <div class="ref-badge-group">
+                <span class="ref-posture-badge ref-badge-classic">
+                  <?= $rf['icono'] ?> <?= e($rf['tipo']) ?>
+                </span>
+                <?php foreach ($rf['posturas'] as $p): ?>
+                  <span class="ref-folio-tag"><?= e($p) ?></span>
+                <?php endforeach; ?>
+              </div>
+              <span class="ref-journal-name"><?= e($rf['editorial']) ?></span>
+            </div>
+
+            <h4 class="ref-paper-title"><?= e($rf['titulo']) ?> (<?= e($rf['autor_año']) ?>)</h4>
+
+            <p class="ref-apa-citation">
+              <strong>Cita APA (7ma ed.):</strong><br>
+              <?= e($rf['cita_apa']) ?>
+            </p>
+
+            <div class="ref-card-footer">
+              <a
+                href="<?= e($rf['enlace']) ?>"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-ref-link"
+                title="Consultar texto o entrada académica"
+              >
+                <span>📖 Consultar Texto</span>
+                <span class="link-arrow">&nearr;</span>
+              </a>
+            </div>
+          </article>
+        <?php endforeach; ?>
+      </div>
+    </section>
+
   </main>
 
   <!-- Modal de Ficha de Autoría -->
@@ -196,7 +318,7 @@ function e(string $valor): string {
           <p><?= e($autor['profesion']) ?></p>
         </div>
         <div class="point-box point-full">
-          <span class="point-num">Asignatura</span>
+          <span class="point-num">Asignatura / Temática</span>
           <p><?= e($autor['asignatura']) ?></p>
         </div>
         <div class="point-box">
@@ -261,6 +383,7 @@ function e(string $valor): string {
     const cards = document.querySelectorAll('.visual-card');
     const seccionHojas = document.getElementById('seccion-hojas');
     const seccionEstrategias = document.getElementById('seccion-estrategias');
+    const seccionReferencias = document.getElementById('seccion-referencias');
 
     tabButtons.forEach((btn) => {
       btn.addEventListener('click', () => {
@@ -275,9 +398,15 @@ function e(string $valor): string {
         if (filter === 'estrategias') {
           seccionHojas.style.display = 'none';
           seccionEstrategias.style.display = '';
+          seccionReferencias.style.display = 'none';
+        } else if (filter === 'referencias') {
+          seccionHojas.style.display = 'none';
+          seccionEstrategias.style.display = 'none';
+          seccionReferencias.style.display = '';
         } else if (filter === 'origen' || filter === 'posibilidad') {
           seccionHojas.style.display = '';
           seccionEstrategias.style.display = 'none';
+          seccionReferencias.style.display = 'none';
           cards.forEach((card) => {
             card.style.display = card.getAttribute('data-category') === filter ? '' : 'none';
           });
@@ -285,6 +414,7 @@ function e(string $valor): string {
           // 'all'
           seccionHojas.style.display = '';
           seccionEstrategias.style.display = '';
+          seccionReferencias.style.display = '';
           cards.forEach((card) => {
             card.style.display = '';
           });
@@ -295,6 +425,7 @@ function e(string $valor): string {
     // 3. Buscador rápido en tiempo real
     const searchInput = document.getElementById('quick-search-input');
     const doCards = document.querySelectorAll('.do-visual-card');
+    const refCards = document.querySelectorAll('.reference-card');
 
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
@@ -307,6 +438,9 @@ function e(string $valor): string {
         });
         doCards.forEach((doCard) => {
           doCard.style.display = doCard.textContent.toLowerCase().includes(query) ? '' : 'none';
+        });
+        refCards.forEach((refCard) => {
+          refCard.style.display = refCard.textContent.toLowerCase().includes(query) ? '' : 'none';
         });
       });
     }

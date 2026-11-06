@@ -28,6 +28,7 @@
 
   <ul class="mini-chips">
     <li><strong>Enfoque:</strong> <?= e($hoja['variable_empresarial']) ?></li>
+    <li><strong>Fuente:</strong> <?= e($hoja['revista_fuente']) ?></li>
     <li><strong>Duración:</strong> <?= e($hoja['duracion']) ?></li>
   </ul>
 
@@ -65,8 +66,25 @@
     </header>
 
     <div class="dialog-research-banner">
-      <p class="research-name">📄 <strong>Investigación:</strong> <?= e($hoja['titulo_investigacion']) ?></p>
-      <p class="research-source">Revista: <cite><?= e($hoja['revista_fuente']) ?></cite> &bull; Impacto: <strong><?= e($hoja['metrica_destacada']) ?></strong></p>
+      <div class="research-banner-info">
+        <p class="research-name">📄 <strong>Investigación:</strong> <?= e($hoja['titulo_investigacion']) ?></p>
+        <p class="research-source">
+          <strong>Autores:</strong> <?= e($hoja['autores_referencia']) ?> &bull;
+          Revista: <cite><?= e($hoja['revista_fuente']) ?></cite> &bull;
+          Impacto: <strong><?= e($hoja['metrica_destacada']) ?></strong>
+        </p>
+      </div>
+      <?php if (!empty($hoja['enlace_referencia'])): ?>
+        <a
+          href="<?= e($hoja['enlace_referencia']) ?>"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ref-banner-link"
+          title="Abrir publicación científica en sitio oficial"
+        >
+          <span>🔗 Ver Revista / Enlace</span> &nearr;
+        </a>
+      <?php endif; ?>
     </div>
 
     <!-- Cuadrícula Visual de los 7 Puntos del Punto 6 -->
@@ -110,6 +128,22 @@
         <span class="point-num">7. ¿Cómo lo aplicaría en la empresa?</span>
         <p><?= e($hoja['como_lo_aplicaria']) ?></p>
       </div>
+
+      <!-- Referencia bibliográfica formal en formato APA dentro del modal -->
+      <?php if (!empty($hoja['cita_apa'])): ?>
+        <div class="point-box point-full point-ref-apa">
+          <span class="point-num">📚 Referencia Bibliográfica (Normas APA 7ma Edición)</span>
+          <p class="apa-citation-text"><?= e($hoja['cita_apa']) ?></p>
+          <a
+            href="<?= e($hoja['enlace_referencia']) ?>"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="ref-inline-link"
+          >
+            Acceder a la fuente en línea &rarr;
+          </a>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </dialog>
