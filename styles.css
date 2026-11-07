@@ -158,23 +158,6 @@ body {
   color: #090d16;
 }
 
-.btn-print {
-  background: rgba(255, 255, 255, 0.08);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 0.6rem 1.1rem;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 0.88rem;
-  cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.15s ease;
-}
-
-.btn-print:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
-}
-
 /* Tira Infográfica de Resumen */
 .visual-summary-strip {
   max-width: 1180px;
@@ -972,7 +955,7 @@ dialog.sheet-dialog::backdrop {
     background: #ffffff !important;
     color: #000000 !important;
   }
-  .filter-bar, .btn-print, .btn-open-sheet, .visual-card {
+  .filter-bar, .btn-open-sheet, .visual-card {
     display: none !important;
   }
   dialog.sheet-dialog {

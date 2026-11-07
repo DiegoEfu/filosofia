@@ -39,12 +39,6 @@ function e(string $valor): string {
           Ficha &rarr;
         </button>
       </div>
-
-      <div class="hero-actions">
-        <button type="button" class="btn-print" id="btn-print">
-          🖨️ Imprimir / PDF
-        </button>
-      </div>
     </div>
 
     <!-- Mapa Visual Rápido (Infografía de los Bloques + Estrategias + Referencias) -->
@@ -155,7 +149,7 @@ function e(string $valor): string {
             <div class="do-card-header">
               <span class="do-icon" aria-hidden="true"><?= $est['icono'] ?></span>
               <div>
-                <span class="do-step-badge">Estrategia DO #0<?= (int)$est['numero'] ?> &bull; <?= e($est['duracion']) ?></span>
+                <span class="do-step-badge">Estrategia #0<?= (int)$est['numero'] ?> &bull; <?= e($est['duracion']) ?></span>
                 <h3><?= e($est['nombre']) ?></h3>
               </div>
             </div>
@@ -232,14 +226,6 @@ function e(string $valor): string {
                 <span>🔗 Visitar Revista Oficial (<?= e($h['revista_fuente']) ?>)</span>
                 <span class="link-arrow">&nearr;</span>
               </a>
-
-              <button
-                type="button"
-                class="btn-ref-sheet"
-                data-dialog-target="modal-<?= e($h['id']) ?>"
-              >
-                📄 Ver Hoja #0<?= (int)$h['numero'] ?>
-              </button>
             </div>
           </article>
         <?php endforeach; ?>
@@ -444,11 +430,6 @@ function e(string $valor): string {
         });
       });
     }
-
-    // 4. Botón de impresión
-    document.getElementById('btn-print')?.addEventListener('click', () => {
-      window.print();
-    });
   </script>
 </body>
 </html>

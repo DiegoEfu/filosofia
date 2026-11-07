@@ -23,7 +23,7 @@
 
   <div class="metric-banner">
     <span class="metric-spark" aria-hidden="true">⚡</span>
-    <strong>Impacto IA:</strong> <?= e($hoja['metrica_destacada']) ?>
+    <strong>Impacto en la IA:</strong> <?= e($hoja['metrica_destacada']) ?>
   </div>
 
   <ul class="mini-chips">
@@ -125,7 +125,7 @@
       </div>
 
       <div class="point-box point-full point-highlight">
-        <span class="point-num">7. ¿Cómo lo aplicaría en la empresa?</span>
+        <span class="point-num">7. Aplicación Estratégica Corporativa</span>
         <p><?= e($hoja['como_lo_aplicaria']) ?></p>
       </div>
 
